@@ -69,7 +69,7 @@ def submit(request):
                                        )
         jobdata = jobform.cleaned_data 
         reposdata = reposformset.cleaned_data
-        tokensdata = tokensformset.cleaned_data[0]
+        tokensdata = tokensformset.cleaned_data
 
         imgjob = ImageJob()
 
