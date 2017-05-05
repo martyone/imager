@@ -61,7 +61,7 @@ def submit(request):
         tokensformset = extraTokensFormset(request.POST)
         ppformset = postProcessFormset(request.POST)
 
-        if not jobform.is_valid() or not reposformset.is_valid() or not ppformset.is_valid():
+        if not jobform.is_valid() or not reposformset.is_valid() or not ppformset.is_valid() or not tokensformset.is_valid():
             return render_to_response('app/upload.html',
                                       {'jobform': jobform, 'reposformset' : reposformset, 'tokensformset' : tokensformset,
                                        'ppformset' : ppformset},
